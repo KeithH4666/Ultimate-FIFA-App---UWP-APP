@@ -12,6 +12,13 @@ namespace UltimateFifaApp.Model
         public SoundCatagory Catagory { get; set; }
         public String AudioFile { get; set; }
         public String ImageFile { get; set; }
+
+        public Sound(string name, SoundCatagory catagory)
+        {
+            Name = name;
+            Catagory = catagory;
+            AudioFile = String.Format("", catagory,name);
+        }
     }
 
     public enum SoundCatagory
