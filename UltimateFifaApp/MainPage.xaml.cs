@@ -25,18 +25,20 @@ namespace UltimateFifaApp
     public sealed partial class MainPage : Page
     {
         private ObservableCollection<Sound> Sounds;
+        private List<MenuItem> MenuItems;
 
         public MainPage()
         {
             this.InitializeComponent();
             Sounds = new ObservableCollection<Sound>();
             //Populate sounds as soon as app loads
-            SoundManager.getAllSounds(Sounds); 
+            SoundManager.getAllSounds(Sounds);
+            MenuItems.Add(new MenuItem { IconFile = "", Catagory = SoundCatagory.Bad });
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {
-
+            MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)

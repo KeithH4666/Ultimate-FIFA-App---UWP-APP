@@ -38,7 +38,7 @@
                     RelativePanel.AlignRightWithPanel="True"></AutoSuggestBox>
         </RelativePanel>
 
-        <SplitView Name="MySplitView"
+        <SplitView Grid.Row="1" Name="MySplitView"
                    DisplayMode="CompactOverlay"
                    CompactPaneLength="45"
                    OpenPaneLength="200">

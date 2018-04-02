@@ -98,6 +98,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\MenuItem.cs" />
     <Compile Include="Model\Sound.cs" />
     <Compile Include="Model\SoundManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,6 +110,9 @@
     <None Include="UltimateFifaApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Icon\bad.png" />
+    <Content Include="Assets\Icon\fifa.png" />
+    <Content Include="Assets\Icon\good.png" />
     <Content Include="Assets\Images\Bad\Boo.png" />
     <Content Include="Assets\Images\Bad\Fail.png" />
     <Content Include="Assets\Images\Fifa\defendingvul.png" />
