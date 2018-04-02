@@ -33,7 +33,11 @@ namespace UltimateFifaApp
             Sounds = new ObservableCollection<Sound>();
             //Populate sounds as soon as app loads
             SoundManager.getAllSounds(Sounds);
-            MenuItems.Add(new MenuItem { IconFile = "", Catagory = SoundCatagory.Bad });
+
+            MenuItems = new List<MenuItem>();
+            MenuItems.Add(new MenuItem { IconFile = "Assets/Icon/bad.png", Category = SoundCatagory.Bad });
+            MenuItems.Add(new MenuItem { IconFile = "Assets/Icon/fifa.png", Category = SoundCatagory.Fifa });
+            MenuItems.Add(new MenuItem { IconFile = "Assets/Icon/good.png", Category = SoundCatagory.Good });
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)

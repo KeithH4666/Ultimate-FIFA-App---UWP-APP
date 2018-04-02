@@ -9,6 +9,6 @@ namespace UltimateFifaApp.Model
     class MenuItem
     {
         public String IconFile { get; set; }
-        public SoundCatagory Catagory { get; set; }
+        public SoundCatagory Category { get; set; }
     }
 }
