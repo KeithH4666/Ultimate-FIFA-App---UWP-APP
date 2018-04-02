@@ -25,7 +25,7 @@ namespace UltimateFifaApp.Model
     public enum SoundCatagory
     {
         Bad,
-        Fifa Comm,
+        Fifa,
         Good
     }
 }
