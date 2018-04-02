@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UltimateFifaApp.Model
 {
-    class Sound
+    public class Sound
     {
         public String Name { get; set; }
         public SoundCatagory Catagory { get; set; }
@@ -17,7 +17,8 @@ namespace UltimateFifaApp.Model
         {
             Name = name;
             Catagory = catagory;
-            AudioFile = String.Format("", catagory,name);
+            AudioFile = String.Format("/Assets/Sounds/{0}/{1}.wav", catagory,name);
+            ImageFile = String.Format("/Assets/Images/{0}/{1}.png", catagory, name);
         }
     }
 

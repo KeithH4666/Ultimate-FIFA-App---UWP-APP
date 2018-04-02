@@ -99,6 +99,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Sound.cs" />
+    <Compile Include="Model\SoundManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -110,17 +111,17 @@
   <ItemGroup>
     <Content Include="Assets\Images\Bad\Boo.png" />
     <Content Include="Assets\Images\Bad\Fail.png" />
-    <Content Include="Assets\Images\Fifa Comm\defeningvul.jpg" />
-    <Content Include="Assets\Images\Fifa Comm\goalkeeperluck.jpg" />
-    <Content Include="Assets\Images\Fifa Comm\niceidea.jpg" />
-    <Content Include="Assets\Images\Fifa Comm\quickfeet.jpg" />
-    <Content Include="Assets\Images\Fifa Comm\save.jpg" />
-    <Content Include="Assets\Images\Fifa Comm\topcorner.jpg" />
-    <Content Include="Assets\Images\Fifa Comm\upperhandmid.jpg" />
-    <Content Include="Assets\Images\Fifa Comm\veryundeserv.jpg" />
+    <Content Include="Assets\Images\Fifa Comm\defendingvul.png" />
+    <Content Include="Assets\Images\Fifa Comm\goalkeeperluck.png" />
+    <Content Include="Assets\Images\Fifa Comm\niceidea.png" />
+    <Content Include="Assets\Images\Fifa Comm\quickfeet.png" />
+    <Content Include="Assets\Images\Fifa Comm\save.png" />
+    <Content Include="Assets\Images\Fifa Comm\topcorner.png" />
+    <Content Include="Assets\Images\Fifa Comm\upperhandmid.png" />
+    <Content Include="Assets\Images\Fifa Comm\veryundeserv.png" />
     <Content Include="Assets\Images\Good\airhorn.png" />
     <Content Include="Assets\Images\Good\Clapping.png" />
-    <Content Include="Assets\Images\Good\goal.jpg" />
+    <Content Include="Assets\Images\Good\goal.png" />
     <Content Include="Assets\PackageAppXManifest\1240x1240.png" />
     <Content Include="Assets\PackageAppXManifest\1240x600.png" />
     <Content Include="Assets\PackageAppXManifest\24x24-large.png" />
@@ -134,8 +135,8 @@
     <Content Include="Assets\PackageAppXManifest\71x71.png" />
     <Content Include="Assets\PackageAppXManifest\88x88-large.png" />
     <Content Include="Assets\PackageAppXManifest\88x88.png" />
-    <Content Include="Assets\Sounds\Bad\FAIL SOUND EFFECT.mp3" />
-    <Content Include="Assets\Sounds\Bad\Small Crowd Booing Sound Effect.mp3" />
+    <Content Include="Assets\Sounds\Bad\Boo.wav" />
+    <Content Include="Assets\Sounds\Bad\Fail.wav" />
     <Content Include="Assets\Sounds\Fifa Comm\defendingvul.wav" />
     <Content Include="Assets\Sounds\Fifa Comm\goalkeepersluckin.wav" />
     <Content Include="Assets\Sounds\Fifa Comm\niceidea.wav" />
@@ -144,9 +145,9 @@
     <Content Include="Assets\Sounds\Fifa Comm\topcorner.wav" />
     <Content Include="Assets\Sounds\Fifa Comm\upperhandmid.wav" />
     <Content Include="Assets\Sounds\Fifa Comm\veryundis.wav" />
-    <Content Include="Assets\Sounds\Good\Clapping Sound Effects.mp3" />
-    <Content Include="Assets\Sounds\Good\DJ Airhorn Sound Effect.mp3" />
-    <Content Include="Assets\Sounds\Good\Spanish Commentator Goal - Sound Effect.mp3" />
+    <Content Include="Assets\Sounds\Good\airhorn.wav" />
+    <Content Include="Assets\Sounds\Good\Clapping.wav" />
+    <Content Include="Assets\Sounds\Good\goal.wav" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
