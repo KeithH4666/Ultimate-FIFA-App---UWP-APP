@@ -111,14 +111,14 @@
   <ItemGroup>
     <Content Include="Assets\Images\Bad\Boo.png" />
     <Content Include="Assets\Images\Bad\Fail.png" />
-    <Content Include="Assets\Images\Fifa Comm\defendingvul.png" />
-    <Content Include="Assets\Images\Fifa Comm\goalkeeperluck.png" />
-    <Content Include="Assets\Images\Fifa Comm\niceidea.png" />
-    <Content Include="Assets\Images\Fifa Comm\quickfeet.png" />
-    <Content Include="Assets\Images\Fifa Comm\save.png" />
-    <Content Include="Assets\Images\Fifa Comm\topcorner.png" />
-    <Content Include="Assets\Images\Fifa Comm\upperhandmid.png" />
-    <Content Include="Assets\Images\Fifa Comm\veryundeserv.png" />
+    <Content Include="Assets\Images\Fifa\defendingvul.png" />
+    <Content Include="Assets\Images\Fifa\goalkeeperluck.png" />
+    <Content Include="Assets\Images\Fifa\niceidea.png" />
+    <Content Include="Assets\Images\Fifa\quickfeet.png" />
+    <Content Include="Assets\Images\Fifa\save.png" />
+    <Content Include="Assets\Images\Fifa\topcorner.png" />
+    <Content Include="Assets\Images\Fifa\upperhandmid.png" />
+    <Content Include="Assets\Images\Fifa\veryundeserv.png" />
     <Content Include="Assets\Images\Good\airhorn.png" />
     <Content Include="Assets\Images\Good\Clapping.png" />
     <Content Include="Assets\Images\Good\goal.png" />

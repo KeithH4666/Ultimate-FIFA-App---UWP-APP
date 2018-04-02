@@ -5,6 +5,7 @@
     xmlns:local="using:UltimateFifaApp"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:UltimateFifaApp.Model"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -56,10 +57,10 @@
                     <TextBlock Name="CategoryTextBlock" Text="All Sounds" FontSize="24">
                     </TextBlock>
 
-                    <GridView Grid.Row="1" Name="SoundGridView" SelectionMode="None" IsItemClickEnabled="True" ItemClick="SoundGridView_ItemClick">
+                    <GridView Grid.Row="1" Name="SoundGridView" SelectionMode="None" IsItemClickEnabled="True" ItemsSource="{x:Bind Sounds}" ItemClick="SoundGridView_ItemClick">
                         <GridView.ItemTemplate>
-                            <DataTemplate>
-                                <Image Name="MyImage" Height="112" Width="101"></Image>
+                            <DataTemplate x:DataType ="data:Sound">
+                                <Image Name="MyImage" Height="112" Width="101" Source="{x:Bind ImageFile}"></Image>
                             </DataTemplate>
                         </GridView.ItemTemplate>
                     </GridView>

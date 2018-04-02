@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using UltimateFifaApp.Model;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -22,9 +24,14 @@ namespace UltimateFifaApp
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private ObservableCollection<Sound> Sounds;
+
         public MainPage()
         {
             this.InitializeComponent();
+            Sounds = new ObservableCollection<Sound>();
+            //Populate sounds as soon as app loads
+            SoundManager.getAllSounds(Sounds); 
         }
 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
