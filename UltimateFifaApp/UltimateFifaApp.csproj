@@ -98,6 +98,7 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Sound.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -107,6 +108,19 @@
     <None Include="UltimateFifaApp_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Images\Bad\Boo.png" />
+    <Content Include="Assets\Images\Bad\Fail.png" />
+    <Content Include="Assets\Images\Fifa Comm\defeningvul.jpg" />
+    <Content Include="Assets\Images\Fifa Comm\goalkeeperluck.jpg" />
+    <Content Include="Assets\Images\Fifa Comm\niceidea.jpg" />
+    <Content Include="Assets\Images\Fifa Comm\quickfeet.jpg" />
+    <Content Include="Assets\Images\Fifa Comm\save.jpg" />
+    <Content Include="Assets\Images\Fifa Comm\topcorner.jpg" />
+    <Content Include="Assets\Images\Fifa Comm\upperhandmid.jpg" />
+    <Content Include="Assets\Images\Fifa Comm\veryundeserv.jpg" />
+    <Content Include="Assets\Images\Good\airhorn.png" />
+    <Content Include="Assets\Images\Good\Clapping.png" />
+    <Content Include="Assets\Images\Good\goal.jpg" />
     <Content Include="Assets\PackageAppXManifest\1240x1240.png" />
     <Content Include="Assets\PackageAppXManifest\1240x600.png" />
     <Content Include="Assets\PackageAppXManifest\24x24-large.png" />
