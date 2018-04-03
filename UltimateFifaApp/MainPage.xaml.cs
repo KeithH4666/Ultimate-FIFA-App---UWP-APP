@@ -30,6 +30,7 @@ namespace UltimateFifaApp
         public MainPage()
         {
             this.InitializeComponent();
+            
             Sounds = new ObservableCollection<Sound>();
             //Populate sounds as soon as app loads
             SoundManager.getAllSounds(Sounds);
@@ -47,7 +48,10 @@ namespace UltimateFifaApp
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-
+            //Pass all sounds back
+            SoundManager.getAllSounds(Sounds);
+            //Set text above images to All sounds
+            CategoryTextBlock.Text = "All Sounds";
         }
 
         private void SearchAutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
@@ -62,7 +66,11 @@ namespace UltimateFifaApp
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            var menuItem = (MenuItem)e.ClickedItem;
+            //Set text above images to whatever category ir is
+            CategoryTextBlock.Text = menuItem.Category.ToString();
+            //Pass all sounds and category to get categoty songs
+            SoundManager.GetSoundsByCategory(Sounds, menuItem.Category);
         }
 
         private void SoundGridView_ItemClick(object sender, ItemClickEventArgs e)

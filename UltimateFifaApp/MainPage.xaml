@@ -9,6 +9,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
@@ -47,15 +48,18 @@
                     <ListView.ItemTemplate>
                     <DataTemplate x:DataType="data:MenuItem">
                         <StackPanel Orientation="Horizontal">
-                        <Image Source="{x:Bind IconFile}" Height="45" Width="45"></Image>
-                            <TextBlock Text="{x:Bind Category}" FontSize="18" Margin="10,0,0,0"></TextBlock>
+                                <Image Source="{x:Bind IconFile}" Height="45" Width="45" Margin="-12,10,0,10"></Image>
+                            <TextBlock Text="{x:Bind Category}" FontSize="18" Margin="10,0,0,0" VerticalAlignment="Center"></TextBlock>
                         </StackPanel>
                     </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
             </SplitView.Pane>
             <SplitView.Content>
-                <Grid>
+                <Grid  Margin="20,0,0,0">
+                    <Grid.Background>
+                        <ImageBrush ImageSource="Assets/Images/RonBack.jpg" Opacity="0.9"/>
+                    </Grid.Background>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition Height="*"></RowDefinition>
@@ -66,16 +70,21 @@
                     <TextBlock Name="CategoryTextBlock" Text="All Sounds" FontSize="24">
                     </TextBlock>
 
-                    <GridView Grid.Row="1" Name="SoundGridView" SelectionMode="None" IsItemClickEnabled="True" ItemsSource="{x:Bind Sounds}" ItemClick="SoundGridView_ItemClick">
+                    <GridView  Grid.Row="1" Name="SoundGridView" SelectionMode="None" IsItemClickEnabled="True" ItemsSource="{x:Bind Sounds}" ItemClick="SoundGridView_ItemClick">
                         <GridView.ItemTemplate>
                             <DataTemplate x:DataType ="data:Sound">
-                                <Image Name="MyImage" Height="112" Width="101" Source="{x:Bind ImageFile}"></Image>
+                                <Border BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Center">
+                                <Image Name="MyImage" Height="112" Width="101"  Source="{x:Bind ImageFile}"></Image>
+                                </Border>
                             </DataTemplate>
                         </GridView.ItemTemplate>
                     </GridView>
                 </Grid>
             </SplitView.Content>
             
+            
+            
         </SplitView>
+        
     </Grid>
 </Page>

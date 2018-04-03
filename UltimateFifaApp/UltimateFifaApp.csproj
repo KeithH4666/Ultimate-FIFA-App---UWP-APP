@@ -126,6 +126,7 @@
     <Content Include="Assets\Images\Good\airhorn.png" />
     <Content Include="Assets\Images\Good\Clapping.png" />
     <Content Include="Assets\Images\Good\goal.png" />
+    <Content Include="Assets\Images\RonBack.jpg" />
     <Content Include="Assets\PackageAppXManifest\1240x1240.png" />
     <Content Include="Assets\PackageAppXManifest\1240x600.png" />
     <Content Include="Assets\PackageAppXManifest\24x24-large.png" />
