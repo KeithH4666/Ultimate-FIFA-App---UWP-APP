@@ -9,7 +9,7 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        
+
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
@@ -46,12 +46,12 @@
             <SplitView.Pane>
                 <ListView Name="MenuItemsListView" IsItemClickEnabled="True" ItemClick="ListView_ItemClick" ItemsSource="{x:Bind MenuItems}">
                     <ListView.ItemTemplate>
-                    <DataTemplate x:DataType="data:MenuItem">
-                        <StackPanel Orientation="Horizontal">
+                        <DataTemplate x:DataType="data:MenuItem">
+                            <StackPanel Orientation="Horizontal">
                                 <Image Source="{x:Bind IconFile}" Height="45" Width="45" Margin="-12,10,0,10"></Image>
-                            <TextBlock Text="{x:Bind Category}" FontSize="18" Margin="10,0,0,0" VerticalAlignment="Center"></TextBlock>
-                        </StackPanel>
-                    </DataTemplate>
+                                <TextBlock Text="{x:Bind Category}" FontSize="18" Margin="10,0,0,0" VerticalAlignment="Center"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
             </SplitView.Pane>
@@ -74,17 +74,30 @@
                         <GridView.ItemTemplate>
                             <DataTemplate x:DataType ="data:Sound">
                                 <Border BorderBrush="Black" BorderThickness="4" HorizontalAlignment="Center">
-                                <Image Name="MyImage" Height="112" Width="101"  Source="{x:Bind ImageFile}"></Image>
+                                    <Image Name="MyImage" Height="112" Width="101"  Source="{x:Bind ImageFile}"></Image>
                                 </Border>
                             </DataTemplate>
                         </GridView.ItemTemplate>
                     </GridView>
                 </Grid>
             </SplitView.Content>
-            
-            
-            
+
+
+
         </SplitView>
-        
+
     </Grid>
+    
+    
+    <Page.BottomAppBar>
+        <AppBar IsOpen="True" IsSticky="True">
+            <StackPanel Orientation="Horizontal">
+                <AppBarButton Name="Record" Icon="Memo" Label="Record" Click="Record_Click"/>
+                <AppBarButton Name="Play" Icon="Play" Label="Play" Click="Play_Click"/>
+                <TextBlock Name="Record_Info" Text="Press record once to start recording and once to stop, then press play!" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+            </StackPanel>
+        </AppBar>
+    </Page.BottomAppBar>
+    
+    
 </Page>

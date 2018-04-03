@@ -26,6 +26,7 @@ namespace UltimateFifaApp
     {
         private ObservableCollection<Sound> Sounds;
         private List<MenuItem> MenuItems;
+        public Recorder recorder = new Recorder();
 
         public MainPage()
         {
@@ -78,6 +79,32 @@ namespace UltimateFifaApp
             var sound = (Sound)e.ClickedItem;
             MyMediaElement.Source = new Uri(this.BaseUri, sound.AudioFile);
 
+        }
+
+        private void Record_Click(object sender, RoutedEventArgs e)
+        {
+            if (recorder.Recording)
+            {
+                recorder.Stop();
+                Record.Icon = new SymbolIcon(Symbol.Memo);
+            }
+            else
+            {
+                recorder.Record();
+                Record.Icon = new SymbolIcon(Symbol.Microphone);
+                Play.Icon = new SymbolIcon(Symbol.Play);
+
+            }
+        }
+
+        private async void Play_Click(object sender, RoutedEventArgs e)
+        {
+            await recorder.Play(Dispatcher);
+            if (recorder.Playing)
+            {
+                Play.Icon = new SymbolIcon(Symbol.Pause);
+            }
+            
         }
     }
 }
