@@ -67,6 +67,8 @@ namespace UltimateFifaApp
 
         private void SoundGridView_ItemClick(object sender, ItemClickEventArgs e)
         {
+            var sound = (Sound)e.ClickedItem;
+            MyMediaElement.Source = new Uri(this.BaseUri, sound.AudioFile);
 
         }
     }
