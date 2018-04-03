@@ -63,6 +63,7 @@ public class Recorder
         IRandomAccessStream audio = buffer.CloneStream();
         if (audio == null) throw new ArgumentNullException("buffer");
         StorageFolder storageFolder = Windows.ApplicationModel.Package.Current.InstalledLocation;
+        
         if (!string.IsNullOrEmpty(filename))
         {
             StorageFile original = await storageFolder.GetFileAsync(filename);
