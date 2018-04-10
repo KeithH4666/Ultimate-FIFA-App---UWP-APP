@@ -37,11 +37,14 @@ namespace UltimateFifaApp
             SoundManager.getAllSounds(Sounds);
 
             MenuItems = new List<MenuItem>();
+
+            //Add each icon with correspondong catagory to menuItems
             MenuItems.Add(new MenuItem { IconFile = "Assets/Icon/bad.png", Category = SoundCatagory.Bad });
             MenuItems.Add(new MenuItem { IconFile = "Assets/Icon/fifa.png", Category = SoundCatagory.Fifa });
             MenuItems.Add(new MenuItem { IconFile = "Assets/Icon/good.png", Category = SoundCatagory.Good });
         }
 
+        //For the side menu button 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
@@ -49,20 +52,10 @@ namespace UltimateFifaApp
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
-            //Pass all sounds back
+            //Pass all sounds back (Incase youve passed in catogory sounds) 
             SoundManager.getAllSounds(Sounds);
             //Set text above images to All sounds
             CategoryTextBlock.Text = "All Sounds";
-        }
-
-        private void SearchAutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
-        {
-
-        }
-
-        private void SearchAutoSuggestBox_QuerySubmitted(AutoSuggestBox sender, AutoSuggestBoxQuerySubmittedEventArgs args)
-        {
-
         }
 
         private void ListView_ItemClick(object sender, ItemClickEventArgs e)
@@ -76,6 +69,7 @@ namespace UltimateFifaApp
 
         private void SoundGridView_ItemClick(object sender, ItemClickEventArgs e)
         {
+            //Play what sound is clicked (Tapped)
             var sound = (Sound)e.ClickedItem;
             MyMediaElement.Source = new Uri(this.BaseUri, sound.AudioFile);
 
@@ -83,14 +77,18 @@ namespace UltimateFifaApp
 
         private void Record_Click(object sender, RoutedEventArgs e)
         {
+            //If true
             if (recorder.Recording)
             {
                 recorder.Stop();
+                //Change icon
                 Record.Icon = new SymbolIcon(Symbol.Memo);
             }
             else
             {
                 recorder.Record();
+
+                //Change icons
                 Record.Icon = new SymbolIcon(Symbol.Microphone);
                 Play.Icon = new SymbolIcon(Symbol.Play);
 
@@ -100,6 +98,7 @@ namespace UltimateFifaApp
         private async void Play_Click(object sender, RoutedEventArgs e)
         {
             await recorder.Play(Dispatcher);
+
             if (recorder.Playing)
             {
                 Play.Icon = new SymbolIcon(Symbol.Pause);

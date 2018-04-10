@@ -12,17 +12,22 @@ namespace UltimateFifaApp.Model
         //Call getSounds and store in var sound Must be public for access from MainPage
         public static void getAllSounds(ObservableCollection<Sound>sounds)
         {
+            //Call getsound method
             var allSounds = getSounds();
             sounds.Clear();
 
+            //Add each sound from allsounds to sounds
             allSounds.ForEach(p => sounds.Add(p));
         }
 
         public static void GetSoundsByCategory(ObservableCollection<Sound> sounds, SoundCatagory soundCategory)
         {
             var allSounds = getSounds();
+
+            //Filter each sound by categoty e.g good,bad,fifa
             var filteredSounds = allSounds.Where(p => p.Catagory == soundCategory).ToList();
             sounds.Clear();
+            //Add each sound to from category to sounds
             filteredSounds.ForEach(p => sounds.Add(p));
         }
 
@@ -49,6 +54,7 @@ namespace UltimateFifaApp.Model
             sounds.Add(new Sound("clapping", SoundCatagory.Good));
             sounds.Add(new Sound("goal", SoundCatagory.Good));
 
+            //Return sounds list
             return sounds;
         }
         

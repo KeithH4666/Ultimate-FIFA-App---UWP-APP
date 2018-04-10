@@ -3,9 +3,12 @@ using System.Threading.Tasks;
 using Windows.Media.Capture;
 using Windows.Media.MediaProperties;
 using Windows.Storage;
+using Windows.Storage.Pickers;
 using Windows.Storage.Streams;
 using Windows.UI.Core;
 using Windows.UI.Xaml.Controls;
+
+//Ref: https://code.msdn.microsoft.com/windowsapps/Audio-Recorder-In-Windows-2d80c2fd
 
 public class Recorder
 {
@@ -14,6 +17,10 @@ public class Recorder
     private MediaCapture capture;
     private InMemoryRandomAccessStream buffer;
 
+    //For saving to user music
+    FileSavePicker file = new FileSavePicker();
+
+    //Booleans to handle when recording or not for pause/play button on footer of app
     public bool Recording;
     public bool Playing;
 
@@ -44,7 +51,9 @@ public class Recorder
 
     public async void Record()
     {
+        //Wait for init method to complet
         await Init();
+        //Wait for capture 
         await capture.StartRecordToStreamAsync(MediaEncodingProfile.CreateM4a(AudioEncodingQuality.Auto), buffer);
         if (Recording) throw new InvalidOperationException("cannot excute two records at the same time");
         Recording = true;
@@ -62,6 +71,8 @@ public class Recorder
         MediaElement playback = new MediaElement();
         IRandomAccessStream audio = buffer.CloneStream();
         if (audio == null) throw new ArgumentNullException("buffer");
+
+        //Creates folder locally on user device for the recorded sound
         StorageFolder storageFolder = Windows.ApplicationModel.Package.Current.InstalledLocation;
         
         if (!string.IsNullOrEmpty(filename))
@@ -82,7 +93,6 @@ public class Recorder
             IRandomAccessStream stream = await storageFile.OpenAsync(FileAccessMode.Read);
             playback.SetSource(stream, storageFile.FileType);
 
-           
             playback.Play();
             
         });

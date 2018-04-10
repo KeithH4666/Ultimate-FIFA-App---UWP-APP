@@ -14,7 +14,9 @@
             <RowDefinition Height="Auto"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
         </Grid.RowDefinitions>
-
+        
+        
+        <!--Top Panel Layout-->
         <RelativePanel>
             <Button Name="HamburgerButton" RelativePanel.AlignLeftWithPanel="True" 
                     Click="HamburgerButton_Click" 
@@ -30,19 +32,15 @@
                     Height="45"
                     Width="45"
                     Content="&#xE0A6;"></Button>
-            <AutoSuggestBox Name="SearchAutoSuggestBox" 
-                    PlaceholderText="Search" 
-                    Width="200" 
-                    QueryIcon="Find"
-                    TextChanged="SearchAutoSuggestBox_TextChanged" 
-                    QuerySubmitted="SearchAutoSuggestBox_QuerySubmitted" 
-                    RelativePanel.AlignRightWithPanel="True"></AutoSuggestBox>
         </RelativePanel>
 
+        <!--A split view control has an expandable/collapsible pane and a content area.-->
+        <!--Ref: https://docs.microsoft.com/en-us/windows/uwp/design/controls-and-patterns/split-view-->
         <SplitView Grid.Row="1" Name="MySplitView"
                    DisplayMode="CompactOverlay"
                    CompactPaneLength="45"
                    OpenPaneLength="200">
+            <!-- Side menu for categories images and text-->
             <SplitView.Pane>
                 <ListView Name="MenuItemsListView" IsItemClickEnabled="True" ItemClick="ListView_ItemClick" ItemsSource="{x:Bind MenuItems}">
                     <ListView.ItemTemplate>
@@ -57,6 +55,7 @@
             </SplitView.Pane>
             <SplitView.Content>
                 <Grid  Margin="20,0,0,0">
+                    <!--BackGround Image-->
                     <Grid.Background>
                         <ImageBrush ImageSource="Assets/Images/RonBack.jpg" Opacity="0.9"/>
                     </Grid.Background>
@@ -69,7 +68,8 @@
 
                     <TextBlock Name="CategoryTextBlock" Text="All Sounds" FontSize="24">
                     </TextBlock>
-
+                    
+                    <!--Actual sound content-->
                     <GridView  Grid.Row="1" Name="SoundGridView" SelectionMode="None" IsItemClickEnabled="True" ItemsSource="{x:Bind Sounds}" ItemClick="SoundGridView_ItemClick">
                         <GridView.ItemTemplate>
                             <DataTemplate x:DataType ="data:Sound">
@@ -88,7 +88,7 @@
 
     </Grid>
     
-    
+    <!--Footer-->
     <Page.BottomAppBar>
         <AppBar IsOpen="True" IsSticky="True">
             <StackPanel Orientation="Horizontal">

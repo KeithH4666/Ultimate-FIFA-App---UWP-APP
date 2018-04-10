@@ -8,6 +8,7 @@ namespace UltimateFifaApp.Model
 {
     public class Sound
     {
+        //Getters + setters for for sound as a whole, e.g have name+cat+audio+image all in one 
         public String Name { get; set; }
         public SoundCatagory Catagory { get; set; }
         public String AudioFile { get; set; }
@@ -17,11 +18,14 @@ namespace UltimateFifaApp.Model
         {
             Name = name;
             Catagory = catagory;
+
+            //Makes the sound easier to get
             AudioFile = String.Format("/Assets/Sounds/{0}/{1}.wav", catagory,name);
             ImageFile = String.Format("/Assets/Images/{0}/{1}.png", catagory, name);
         }
     }
 
+    //Enums for catagorys
     public enum SoundCatagory
     {
         Bad,
