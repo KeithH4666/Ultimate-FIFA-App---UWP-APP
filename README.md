@@ -1,4 +1,4 @@
-# The Ultimate Fifa App
+# Ultimate Fifa Sounds
 
 This application is a UWP app for a college assignment.
 
