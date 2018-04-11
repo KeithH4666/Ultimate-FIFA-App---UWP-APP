@@ -66,7 +66,7 @@
 
                     <MediaElement Name="MyMediaElement" AutoPlay="True"></MediaElement>
 
-                    <TextBlock Name="CategoryTextBlock" Text="All Sounds" FontSize="24">
+                    <TextBlock Name="CategoryTextBlock" Text="All Sounds" FontWeight="Bold" FontSize="30" TextAlignment="Center">
                     </TextBlock>
                     
                     <!--Actual sound content-->
@@ -94,7 +94,7 @@
             <StackPanel Orientation="Horizontal">
                 <AppBarButton Name="Record" Icon="Memo" Label="Record" Click="Record_Click"/>
                 <AppBarButton Name="Play" Icon="Play" Label="Play" Click="Play_Click"/>
-                <TextBlock Name="Record_Info" Text="Press record once to start recording and once to stop, then press play!" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                <TextBlock Name="Record_Info" Text="Press record once to start recording and once to stop, then press play!" FontWeight="ExtraBold" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
             </StackPanel>
         </AppBar>
     </Page.BottomAppBar>
