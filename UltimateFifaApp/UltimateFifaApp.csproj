@@ -133,6 +133,7 @@
     <Content Include="Assets\Images\Good\Clapping.png" />
     <Content Include="Assets\Images\Good\goal.png" />
     <Content Include="Assets\Images\RonBack.jpg" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\PackageAppXManifest\1240x1240.png" />
     <Content Include="Assets\PackageAppXManifest\1240x600.png" />
     <Content Include="Assets\PackageAppXManifest\24x24-large.png" />
@@ -160,14 +161,13 @@
     <Content Include="Assets\Sounds\Good\Clapping.wav" />
     <Content Include="Assets\Sounds\Good\goal.wav" />
     <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\StoreLogo.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Properties\Default.rd.xml" />
-    <Content Include="Assets\LockScreenLogo.scale-200test.png" />
-    <Content Include="Assets\SplashScreen.scale-200test.png" />
-    <Content Include="Assets\Square150x150Logo.scale-200test.png" />
-    <Content Include="Assets\Square44x44Logo.scale-200test.png" />
-    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplatedtest.png" />
-    <Content Include="Assets\StoreL.png" />
-    <Content Include="Assets\Wide310x150Logo.scale-200test.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
