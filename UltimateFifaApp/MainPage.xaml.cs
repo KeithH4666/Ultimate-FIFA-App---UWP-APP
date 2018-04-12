@@ -47,6 +47,7 @@ namespace UltimateFifaApp
         //For the side menu button 
         private void HamburgerButton_Click(object sender, RoutedEventArgs e)
         {
+            //Open/Close
             MySplitView.IsPaneOpen = !MySplitView.IsPaneOpen;
         }
 
@@ -101,6 +102,7 @@ namespace UltimateFifaApp
 
             if (recorder.Playing)
             {
+                //Change icon
                 Play.Icon = new SymbolIcon(Symbol.Pause);
             }
             
